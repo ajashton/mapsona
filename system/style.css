@@ -88,7 +88,10 @@ h1.site-name {
     width: 150px;
   }
   
-  #footer img.moas-icon { margin:5px; vertical-align:50%; }
+  #footer img.icon {
+    margin: 0 5px;
+    vertical-align:-20%;
+  }
   
   #footer span.moas { color: #333; font-size: 14px; }
 
