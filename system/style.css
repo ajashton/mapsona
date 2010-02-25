@@ -10,7 +10,7 @@ body,
 form,
 input,
 select { 
-  font-family:"Liberation Sans","Helvetica Neue",Arial,Helvetica,sans-serif;
+  font-family:"Helvetica Neue",Arial,Helvetica,sans-serif;
 }
 
 a {
@@ -60,7 +60,7 @@ h1.site-name {
   line-height:30px;
   font-size:11px;
 
-  padding:0px;
+  padding:0px 5px;
 
   position:fixed;
   bottom:0px;
@@ -89,11 +89,13 @@ h1.site-name {
   }
   
   #footer img.icon {
-    margin: 0 5px;
     vertical-align:-20%;
+    border: none;
   }
   
   #footer span.moas { color: #333; font-size: 14px; }
+  
+  #footer span.copyright { float: right; }
 
 /**
  * Shadow =============================================================
@@ -441,6 +443,7 @@ div.uploader span.filename {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-shadow: 0 1px 0 #eee;
   white-space: nowrap;
   cursor: default;
 }
@@ -558,7 +561,7 @@ div.openlayers-blockswitcher h2.layers-title, div.openlayers-blockswitcher div.f
   -moz-background-origin:padding;
   background:transparent none repeat scroll 0 0;
   border-bottom:1px solid #E8E8E8;
-  line-height:15px;
+  line-height:20px;
   padding:5px 5px 4px 20px;
 }
 
@@ -576,7 +579,7 @@ div.openlayers-blockswitcher div.activated {
 }
 
 div.openlayers-blockswitcher h2.layers-title, div.openlayers-blockswitcher div.form-item label, h2.form-title {
-  font-size:11px;
+  font-size:12px;
 }
 
 h1.form-title {
@@ -710,11 +713,13 @@ div.olMapViewport div.olControlAttribution {
  */
 
 div#documentation-page {
-  margin: -41px 20px 100px 20px;
+  margin: -41px 0px 0px;
+  padding: 0px 20px 40px;
+  background-color: #fff;
 }
 
   div#documentation-page h2 {
-    border-top: 1px solid #888;
+    border-top: 1px solid #aaa;
     margin: 40px -20px 20px -20px;
     padding: 20px;
   }
@@ -742,7 +747,8 @@ div#kml_window {
     -khtml-border-radius:10px;
     
     background:#fff;
-    border:2px solid #666;
+    border:1px solid #666;
+    border-bottom-width: 2px;
 
     position:relative;
     width:580px;
@@ -751,6 +757,7 @@ div#kml_window {
 
   div#kml_window div.diagram {
     padding: 10px;
+    margin: 0px auto;
   }
 
     div#kml_window div.diagram p {
@@ -762,10 +769,10 @@ div#kml_window {
     -moz-background-inline-policy:continuous;
     -moz-background-origin:padding;
   
-    -moz-border-radius-bottomleft:10px;
-    -moz-border-radius-bottomright:10px;
-    -webkit-border-bottom-left-radius:10px;
-    -webkit-border-bottom-right-radius:10px;
+    -moz-border-radius-bottomleft:9px;
+    -moz-border-radius-bottomright:9px;
+    -webkit-border-bottom-left-radius:9px;
+    -webkit-border-bottom-right-radius:9px;
   
     padding: 10px;
     background: #e6e6e6 url(images/gradient.png) 0 0 repeat-x;
