@@ -248,6 +248,13 @@ div.olPopupContent div.ol-popup-name div.meta {
 /**
  * Forms ==============================================================
  */
+ 
+.selector select:focus,
+.radio input:focus,
+.checker input:focus,
+.uploader input:focus {
+  outline: 0;
+}
 
 /* Items */
 div.form-item {
@@ -287,7 +294,7 @@ select {
 
 input.form-submit,
 input.form-submit-mini,
-input#kml-file-input,
+div.uploader span.action,
 #kml-file-input-cancel {
   -moz-border-radius:4px;
   -webkit-border-radius:4px;
@@ -310,6 +317,7 @@ input#kml-file-input,
 
   input.form-submit:hover,
   input.form-submit-mini:hover,
+  div.uploader span.action:hover,
   #kml-file-input-cancel:hover { 
     background-color:#fff;
     border-color:#999;
@@ -318,12 +326,22 @@ input#kml-file-input,
 
   input.form-submit:active,
   input.form-submit-mini:active,
+  div.uploader span.action:active,
   #kml-file-input-cancel:active {
     background:#f0f0f0;
     border-color:#888;
     cursor:pointer;
   }
 
+#kml-file-input-cancel {
+  margin-left: 10px;
+  height:28px;
+}
+
+div .kml-file-input-wrapper div.right { float: right; }
+
+  div .kml-file-input-wrapper div.right input,
+  div .kml-file-input-wrapper div.right a { float: left; }
 
 /*
  * Fieldsets
@@ -349,6 +367,97 @@ div.fieldset-content {
   padding:0px 1px 1px;
   background:#fff;
 }
+
+/*
+ * File Upload (Uniform Plugin)
+ */
+.uploader,
+.uploader *{
+  margin: 0;
+  padding: 0;
+}
+ 
+div.uploader {
+  background:none;
+  height: 30px;
+  width: 300px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  cursor: default;
+}
+
+div.uploader.focus span.action,
+div.uploader.hover span.action,
+div.uploader:hover span.action {
+  border-color:#999;
+}
+
+div.uploader.active span.action,
+div.uploader:active span.action {
+  border-color:#888;
+}
+
+div.uploader.focus.active span.action,
+div.uploader:focus.active span.action,
+div.uploader.focus:active span.action,
+div.uploader:focus:active span.action {
+  border-color:#888;
+}
+
+div.uploader.disabled span.action {
+  opacity:0.6;
+  color: #aaa;
+}
+
+div.uploader.disabled span.filename {
+  color: #aaa;
+}
+
+div.uploader span.action {
+  height: 28px;
+  line-height: 28px;
+  padding: 0 20px;
+  text-align: center;
+  text-shadow: #fff 0px 1px 0px;
+  font-size: 14px;
+  font-weight: 800;
+  float: left;
+  display: inline;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+div.uploader span.filename {
+  height: 30px;
+  line-height: 30px;
+  color: #404040;
+  width: 150px;
+  font-size: 14px;
+  padding: 0px 10px;
+  float: right;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: default;
+}
+
+div.uploader input {
+  width: 130px;
+  height: 30px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  float: left;
+  border: none;
+  cursor: pointer;
+}
+
 
 /*
  * TABLES =============================================================
