@@ -74,6 +74,8 @@ h1.site-name {
     color: #444;
     font-weight:bold;
   }
+  
+    #footer a:hover { color:#6688AA; }
 
   #footer a.ds {
     background: url(images/ds.gif) no-repeat;
@@ -757,8 +759,12 @@ div#kml_window {
 
   div#kml_window div.diagram {
     padding: 10px;
-    margin: 0px auto;
   }
+    
+    div#kml_window div.diagram img {
+      display: block;
+      margin: 0 auto;
+    }
 
     div#kml_window div.diagram p {
       margin-bottom: 0;
