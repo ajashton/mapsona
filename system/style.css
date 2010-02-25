@@ -1,8 +1,16 @@
 body {
   background:#eee;
   color:#444;
-  font: 13px/20px "Helvetica Neue",Arial,Helvetica,sans-serif;
+  font-size: 13px;
+  line-height: 20px;
   margin: 0;
+}
+
+body,
+form,
+input,
+select { 
+  font-family:"Liberation Sans","Helvetica Neue",Arial,Helvetica,sans-serif;
 }
 
 a {
@@ -18,46 +26,53 @@ a {
   position:fixed;
   width: 100%;
   top:auto;
-  background-color:#182824;
-  border-color:#152420;
   z-index: 20000;
-  -moz-background-clip:border;
+  /*-moz-background-clip:border;
   -moz-background-inline-policy:continuous;
-  -moz-background-origin:padding;
-  background:#222222 none repeat scroll 0 0;
-  border-bottom:3px solid #111111;
-  height:47px;
+  -moz-background-origin:padding;*/
+  background:#404040 url(images/gradient.png) 0 -1px repeat-x;
+  height:50px;
   line-height:50px;
   overflow:hidden;
   display:inline-block;
 }
   
+h1.site-name {
+  font-size: 22px;
+  line-height: 50px;
+  font-weight:500;
+  text-shadow: 0 1px 0 #000;
+  color:#fff;
+  margin:0;
+  padding:0 20px;
+}
 
+/**
+* Superchill footer ==================================================
+*/
+#footer {
+  background:#eee url(images/gradient.png) 0 0 repeat-x;
+  color:#555;
+  text-shadow: 0 1px 0 #fff;
 
-  /**
-   * Superchill footer ==================================================
-   */
-  #footer {
-    background:#212320;
-    color:#ccc;
+  overflow:hidden;
+  height:30px;
+  line-height:30px;
+  font-size:11px;
 
-    overflow:hidden;
-    height:40px;
-    line-height:40px;
-    font-size:11px;
+  padding:0px;
 
-    padding:0px 20px;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  right:0px;
 
-    position:fixed;
-    bottom:0px;
-    left:0px;
-    right:0px;
-
-    z-index:1000;
-  }
+  z-index:1000;
+}
 
   #footer a {
-    color: #eee;
+    color: #444;
+    font-weight:bold;
   }
 
   #footer a.ds {
@@ -73,29 +88,42 @@ a {
     width: 150px;
   }
   
+  #footer img.moas-icon { margin:5px; vertical-align:50%; }
+  
+  #footer span.moas { color: #333; font-size: 14px; }
 
 /**
  * Shadow =============================================================
  */
-  #shadow-top,
-  #shadow-bottom {
-    position:fixed;
-    left:0px;
-    right:0px;
-    z-index:5000;
-    height:10px;
+#shadow-top,
+#shadow-bottom,
+#shadow-left {
+  background-color:#000;
+  opacity:0.125;
+  position:fixed;
+  left:0px;
+  right:0px;
+  z-index:5000;
 }
 
 #shadow-top {
-  background:url(images/shadow_top.png) repeat-x;
+  height:2px;
   top:50px;
-  }
+}
 
-  #shadow-bottom {
-    background:url(images/shadow_bottom.png) repeat-x;
-    z-index:5000;
-    bottom:40px;
-  }
+#shadow-bottom {
+  height:1px;
+  z-index:5000;
+  bottom:30px;
+}
+
+#shadow-left {
+  left: 250px;
+  right: auto;
+  width: 1px;
+  top: 5px;
+  bottom: 30px;
+}
 
 /**
  * Map ================================================================
@@ -104,15 +132,15 @@ div.openlayers-views-map { background:#eee; }
 
 div.openlayers-views-map,
 div.openlayers-views-map div.openlayers-map {
-    position:fixed;
+  position:fixed;
 
-    top:40px;
-    bottom:40px;
-    left:0px;
-    right:0px;
+  top:50px;
+  bottom:30px;
+  left:0px;
+  right:0px;
 
-    width:100%;
-    height:100%;
+  width:100%;
+  height:100%;
 }
 
 
@@ -177,21 +205,21 @@ div.olPopupContent div.ol-popup-name div.meta {
 /**
  * Page ===============================================================
  */
-  #page { padding:60px 20px; }
+#page { padding:60px 20px; }
 
-  #right {
-    padding:0px 0px 0px 20px;
-    width:220px;
-    float:left;
+#right {
+  padding:0px 0px 0px 20px;
+  width:220px;
+  float:left;
 }
 
 #left {
   -moz-background-clip:border;
   -moz-background-inline-policy:continuous;
   -moz-background-origin:padding;
-  background:#F8F8F8 none repeat scroll 0 0;
+  background:#f2f2f2 none repeat scroll 0 0;
   float:left;
-  width:25%;
+  width:250px;
   bottom:0;
   left:0;
   overflow:auto;
@@ -237,11 +265,11 @@ div.form-item label.option {
   text-transform:none;
   }
 
-  div.form-item div.form-item {
-    background:transparent;
-    border:0px;
-    padding:0px;
-  }
+div.form-item div.form-item {
+  background:transparent;
+  border:0px;
+  padding:0px;
+}
 
 /*
  * Elements
@@ -249,45 +277,49 @@ div.form-item label.option {
 input.form-text,
 textarea,
 select {
-    padding:5px;
-    background:#fff;
-    border-color:#ccc;
+  padding:5px;
+  background:#fff;
+  border-color:#ccc;
 }
 
-input.form-submit {
-  -moz-border-radius:30px;
-  -webkit-border-radius:30px;
-  -khtml-border-radius:30px;
+input.form-submit,
+input.form-submit-mini,
+input#kml-file-input,
+#kml-file-input-cancel {
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  -khtml-border-radius:4px;
+  
+  border:1px solid #c8c8c8;
+  border-bottom-color:#aaa;
 
-  font-size:15px;
-  letter-spacing:-1px;
+  font-size:14px;
+  font-weight:800;
+  line-height:28px;
+  text-shadow: 0 1px 0 #fff;
 
-  color:#222;
-  background:#ccc;
-  padding:0 10px;
-  margin:5px;
+  color:#4d4d4d;
+  background:#fafafa url(images/gradient.png) 0 0 repeat-x;
+  padding:0px 20px;
+  margin:0px;
+  height:30px;
 }
 
-input.form-submit:hover { background:#444; color:#fff; }
-input.form-submit:active { background:#000; color:#fff; }
+  input.form-submit:hover,
+  input.form-submit-mini:hover,
+  #kml-file-input-cancel:hover { 
+    background-color:#fff;
+    border-color:#999;
+    cursor:pointer;
+  }
 
-input.form-submit-mini {
-  -moz-border-radius:10px;
-  -webkit-border-radius:10px;
-  -khtml-border-radius:10px;
-
-  font-size:11px;
-  letter-spacing:-1px;
-
-  color:#222;
-  background:#ccc;
-  padding:5px 15px;
-  margin:5px;
-}
-
-input.form-submit-mini:hover { background:#444; color:#fff; }
-input.form-submit-mini:active { background:#000; color:#fff; }
-
+  input.form-submit:active,
+  input.form-submit-mini:active,
+  #kml-file-input-cancel:active {
+    background:#f0f0f0;
+    border-color:#888;
+    cursor:pointer;
+  }
 
 
 /*
@@ -373,11 +405,11 @@ label {
 
 #map {
   background-color: #fff;
-  bottom: 40px;
+  bottom: 30px;
   top: 0;
   position: absolute;
   top: 50px;
-  left:25%;
+  left:250px;
   right:0;
 }
 
@@ -385,8 +417,9 @@ label {
   display:inline-block;
   float:right;
   min-height:400px;
-  width:75%;
-  top: 50px;;
+  width:100%;
+  top: 50px;
+  left: 250px;
 }
 
 #block-openlayers_plus-blockswitcher {
@@ -505,10 +538,11 @@ h2.form-title {
  * KML INPUT
  */
 div.kml-input {
-  padding: 15px;
+  padding: 10px 15px;
 }
 
-div.kml-input #kml-file-input {
+div.kml-input #kml-file-chooser {
+  margin: 5px auto;
 }
 
 /*
@@ -583,16 +617,28 @@ div#documentation-page {
  */
 div#kml_window {
   position: absolute;
-  left: 400px;
-  top: 100px;
-  width: 555px;
-  background: #fff;
-  border: 1px solid #aaa;
+  left: 250px;
+  right: 0;
+  top: 50px;
+  bottom: 30px;
+  background-image:url(images/kml_window.png);
 }
+
+  div#kml_window_inner {
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -khtml-border-radius:10px;
+    
+    background:#fff;
+    border:2px solid #666;
+
+    position:relative;
+    width:580px;
+    margin:10px auto;
+  }
 
   div#kml_window div.diagram {
     padding: 10px;
-    width: 532px;
   }
 
     div#kml_window div.diagram p {
@@ -600,6 +646,20 @@ div#kml_window {
     }
 
   div#kml_window div.kml-file-input-wrapper {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+  
+    -moz-border-radius-bottomleft:10px;
+    -moz-border-radius-bottomright:10px;
+    -webkit-border-bottom-left-radius:10px;
+    -webkit-border-bottom-right-radius:10px;
+  
     padding: 10px;
-    background-color: #eee;
+    background: #e6e6e6 url(images/gradient.png) 0 0 repeat-x;
+    border-top:1px solid #c8c8c8;
+    height:30px;
   }
+  
+  #kml-file-chooser,
+  #kml-file-input-cancel { display: block; }

@@ -19,7 +19,7 @@
   <!-- layers.js is included within the body so that it's in the javascript global namespace -->
   <script src='resources/layers.js'></script>
   <div id='header'>
-    <h1 class="site-name"></h1>
+    <h1 class="site-name">My Maps on a Stick Site</h1>
   </div>
   <div id='left'>
     <div class='openlayers-blockswitcher'>
@@ -45,7 +45,6 @@
         </div>
       </div>
     </div> <!-- .openlayers-blockswitcher -->
-    <h2 class='form-title'>Add KML Layer</h2>
     <div class='kml-input'>
       <input id='kml-file-chooser' class='form-submit-mini' type='button' value='Add KML to Map' />
     </div>
@@ -53,31 +52,35 @@
   </div> <!-- #left -->
   <div id='shadow-bottom'></div>
   <div id='shadow-top'></div>
+  <div id='shadow-left'></div>
   <div id='canvas'>
     <div id='map'></div>
   </div>
   <div id='footer'>
     <!-- image link -->
-    <a href="http://www.developmentseed.org/" class='ds'></a>
-    Maps on a Stick: a project of 
-      <a href="http://www.mapbox.com/">MapBox.com</a> and 
-      <a href="http://www.developmentseed.org/">DevelopmentSeed.org</a>
+<!--     <a href="http://www.developmentseed.org/" class='ds'></a> -->
+    <img src="system/images/moas-small.png" class="moas-icon" />
+    <span class="moas">Maps on a Stick</span>: a project of 
+      <a href="http://www.mapbox.com/">MapBox</a> and 
+      <a href="http://www.developmentseed.org/">DevelopmentSeed</a>
   </div>
   <div id='kml_window'>
-    <div class='diagram'>
-      <img src='system/images/kml_diagram.jpg' />
-      <p>
-        First copy new KML files from their folder or URL to 
-        the KML folder in Maps on a Stick. This ensures that the browser 
-        can access them and that they won't be lost when the USB
-        Drive is disconnected.
-      </p>
-    </div>
-    <div class='kml-file-input-wrapper'>
-      1 <input type='file' name='kml-file-input' id='kml-file-input' />
-      2 <input type='submit' name='kml-file-submit' id='kml-file-submit' value='Add Layer' />
-      <div style='float: right;'>
-        <a href="#" id='kml-file-input-cancel'>cancel</a>
+    <div id='kml_window_inner'>
+      <div class='diagram'>
+        <img src='system/images/kml_diagram.jpg' />
+        <p>
+          First copy new KML files from their folder or URL to 
+          the KML folder in Maps on a Stick. This ensures that the browser 
+          can access them and that they won't be lost when the USB
+          Drive is disconnected.
+        </p>
+      </div>
+      <div class='kml-file-input-wrapper'>
+        <input type='file' name='kml-file-input' id='kml-file-input' />
+        <input type='submit' name='kml-file-submit' id='kml-file-submit' class='form-submit' value='Add Layer' />
+        <div style='float: right;'>
+          <a href="#" id='kml-file-input-cancel'>Close</a>
+        </div>
       </div>
     </div>
   </div>
