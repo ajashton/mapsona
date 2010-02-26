@@ -385,7 +385,6 @@ div.uploader {
   background:none;
   height: 30px;
   width: 300px;
-  margin-bottom: 20px;
   cursor: pointer;
   position: relative;
   float: left;
@@ -453,7 +452,7 @@ div.uploader span.filename {
 }
 
 div.uploader input {
-  width: 130px;
+  width: 100%;
   height: 30px;
   opacity: 0;
   position: absolute;
