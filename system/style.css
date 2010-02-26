@@ -1,7 +1,7 @@
 body {
   background:#eee;
   color:#444;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 20px;
   margin: 0;
 }
@@ -10,7 +10,7 @@ body,
 form,
 input,
 select { 
-  font-family:"Helvetica Neue",Arial,Helvetica,sans-serif;
+  font-family:"SwissA","Helvetica Neue",Arial,Helvetica,sans-serif;
 }
 
 a {
@@ -31,15 +31,15 @@ a {
   -moz-background-inline-policy:continuous;
   -moz-background-origin:padding;*/
   background:#404040 url(images/gradient.png) 0 -1px repeat-x;
-  height:50px;
-  line-height:50px;
+  height:30px;
+  line-height:40px;
   overflow:hidden;
   display:inline-block;
 }
   
 h1.site-name {
-  font-size: 22px;
-  line-height: 50px;
+  font-size: 18px;
+  line-height: 30px;
   font-weight:500;
   text-shadow: 0 1px 0 #000;
   color:#fff;
@@ -115,7 +115,7 @@ h1.site-name {
 
 #shadow-top {
   height:2px;
-  top:50px;
+  top: 30px;
 }
 
 #shadow-bottom {
@@ -141,7 +141,7 @@ div.openlayers-views-map,
 div.openlayers-views-map div.openlayers-map {
   position:fixed;
 
-  top:50px;
+  top:40px;
   bottom:30px;
   left:0px;
   right:0px;
@@ -231,7 +231,7 @@ div.olPopupContent div.ol-popup-name div.meta {
   left:0;
   overflow:auto;
   position:fixed;
-  top:50px;
+  top: 30px;
 }
 
 
@@ -416,10 +416,6 @@ div.uploader.disabled span.action {
   color: #aaa;
 }
 
-div.uploader.disabled span.filename {
-  color: #aaa;
-}
-
 div.uploader span.action {
   height: 28px;
   line-height: 28px;
@@ -435,7 +431,13 @@ div.uploader span.action {
 }
 
 div.uploader span.filename {
-  height: 30px;
+  background:#fff;
+  border: 1px solid #c8c8c8;
+  border-top-color: #aaa;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  -khtml-border-radius:4px;
+  height: 28px;
   line-height: 30px;
   color: #404040;
   width: 150px;
@@ -523,9 +525,8 @@ label {
 #map {
   background-color: #fff;
   bottom: 30px;
-  top: 0;
   position: absolute;
-  top: 50px;
+  top: 30px;
   left:250px;
   right:0;
 }
@@ -535,7 +536,7 @@ label {
   float:right;
   min-height:400px;
   width:100%;
-  top: 50px;
+  top: 30px;
   left: 250px;
 }
 
@@ -562,9 +563,10 @@ div.openlayers-blockswitcher h2.layers-title, div.openlayers-blockswitcher div.f
   -moz-background-inline-policy:continuous;
   -moz-background-origin:padding;
   background:transparent none repeat scroll 0 0;
+  border-top:1px solid #fff;
   border-bottom:1px solid #E8E8E8;
   line-height:20px;
-  padding:5px 5px 4px 20px;
+  padding:4px 5px 4px 20px;
 }
 
 div.openlayers-blockswitcher div.radio {
@@ -628,7 +630,7 @@ div.openlayers-map #block-openlayers_plus-blockswitcher div.block-content {
   padding:0;
   position:absolute;
   right:0;
-  top:30px;
+  top: 30px;
 }
 div.openlayers-map div.openlayers-blockswitcher h2.layers-title, div.openlayers-map div.openlayers-blockswitcher div.form-item {
   padding-left:10px;
@@ -738,7 +740,7 @@ div#kml_window {
   position: absolute;
   left: 250px;
   right: 0;
-  top: 50px;
+  top: 30px;
   bottom: 30px;
   background-image:url(images/kml_window.png);
 }
