@@ -10,7 +10,7 @@ body,
 form,
 input,
 select { 
-  font-family:"SwissA","Helvetica Neue",Arial,Helvetica,sans-serif;
+  font-family:"Helvetica Neue",Arial,Helvetica,sans-serif;
 }
 
 a {
@@ -656,7 +656,9 @@ h2.form-title {
  * KML INPUT
  */
 div.kml-input {
-  padding: 10px 15px;
+  padding: 9px 20px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 div.kml-input #kml-file-chooser {
@@ -732,6 +734,26 @@ div#documentation-page {
     padding: 2px;
   }
 
+#left ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+  #left ul li a {
+    display: block;
+    line-height: 28px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0px 10px 0px 20px;
+  }
+  
+    #left ul li a:hover {
+      background-color: #f0f0f0;
+      border-top-color: #f0f0f0;
+    }
+    
+  #left ul li li a { padding-left: 10px; }
+  
 /**
  * KML Form
  */
