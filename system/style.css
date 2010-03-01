@@ -786,11 +786,17 @@ div#kml_window {
     
     div#kml_window div.diagram img {
       display: block;
-      margin: 0 auto;
+      margin: 10px auto;
+    }
+    
+    div#kml_window h3 {
+      font-size: 13px;
+      font-weight: bold;
+      margin: 10px;
     }
 
-    div#kml_window div.diagram p {
-      margin-bottom: 0;
+    div#kml_window div.diagram ol {
+      margin: 0;
     }
 
   div#kml_window div.kml-file-input-wrapper {
